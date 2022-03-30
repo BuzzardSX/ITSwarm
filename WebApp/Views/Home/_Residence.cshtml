@@ -1,0 +1,12 @@
+@model IndexResidenceViewModel
+
+<tr class="position-relative">
+	<td>@Model.StreetName</td>
+	<td>@Model.StreetNumber</td>
+	<td>@Model.DoorNumber</td>
+	<td>@Model.LastReading</td>
+	<td>@Model.LastCheckDate</td>
+	<td>
+		<a class="stretched-link" asp-route="home" asp-route-address="@Model.Address"></a>
+	</td>
+</tr>

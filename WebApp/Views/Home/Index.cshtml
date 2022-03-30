@@ -1,0 +1,21 @@
+@model IndexViewModel
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th scope="col">Улица</th>
+			<th scope="col">Дом</th>
+			<th scope="col">Квартира</th>
+			<th scope="col">Тек. показания</th>
+			<th scope="col">Дата снятия показаний</th>
+			<th scope="col"></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var r in Model.Residences)
+		{
+			<partial name="_Residence" model="r" />
+		}
+	</tbody>
+</table>
+<partial name="_ResidenceForm" for="ResidenceForm" />
